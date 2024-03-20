@@ -198,15 +198,24 @@
     <div class="post-info">
       <div class="post-meta">
         <span><span class="icon-calendar"></span>2024-03-20</span>
-        <span><span class="icon-pencil"></span>35 words</span>
+        <span><span class="icon-pencil"></span>305 words</span>
         <span><span class="icon-clock"></span>1 min</span>
       </div>
       <h2 class="post-title">MarkDown使用心得</h2>
       <article class="post-article">
         
-          菜鸟教程已经介绍得非常详尽了，这里我将列出一些自己常用的格式语法。  
+          菜鸟教程已经介绍得非常详尽了，这里我将列出一些自己常用的格式语法和失误。  
+插入图片![alt 属性文本](图片地址 &amp;quot;可选标题&amp;quot;)
 
-无能狂怒
+具体在本博客中的应用就是
+https://github.com/Refyuan/refyuan.github.io/raw/main/covers/miku5.png
+
+经测试，jpg，png，gif格式都支持。
+隐藏文本我想要做到像steam评论那样用黑色方块隐藏文本，在鼠标悬停于方块时显示文本。  
+&amp;lt;!-- 隐藏文本 --&amp;gt;
+
+失败。隐藏确实隐藏了，但是相当于被注释掉了，无法正常显示。
+&amp;lt;p hidden&amp;gt;隐
         
       </article>
     </div>
@@ -234,9 +243,9 @@
       <article class="post-article">
         
           创建博客  一开始自己摸索，然后像发布的第一篇文章那样，一通操作创建了白纸黑字经典款如办公室word一样的网页，后又借助fork第一次创建了博客。
-  然后在一次编辑_config.yml文件后疯狂报错，失去耐心的我直接删库重来，慢慢磨了几天，于是有了现在的博客。
+  然后在一次编辑_config.yml文件后疯狂报错，失去耐心(无能狂怒)的我直接删库重来，慢慢磨了几天，于是有了现在的博客。
   这个博客基于github.pages和hexo，目前99%的炫酷特效都来自于制作Reimu主题的大佬。选主题时在hexo翻了翻，有两个主题令我印象深刻，一个是博丽灵梦，另一个是明日方舟。这俩体现的厨力和技术力双高，使我折服。我不禁想：我也想成为厉害的人！我也想做出好看功能多的网页！
-  前期准备其实还算顺利，删库后我很快就通过阅
+  前期准备其实还算顺利，删库后我
         
       </article>
     </div>
@@ -429,7 +438,7 @@ Run server1$ hexo ser
       
         <div>
           <span class="icon-brush"></span>
-          2.4k
+          2.6k
           &nbsp;|&nbsp;
           <span class="icon-coffee"></span>
           00:10
