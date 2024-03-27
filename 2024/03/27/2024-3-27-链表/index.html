@@ -11,7 +11,7 @@
 
   
   <title>
-    Archives: 2024 |
+    指针与链表 |
     
     Refyuan
   </title>
@@ -25,12 +25,18 @@
   
 <link rel="stylesheet" href="/css/loader.css">
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Refyuan">
-<meta property="og:url" content="http://refyuan.github.io/archives/2024/index.html">
+  <meta name="description" content="有序链表的合成示例：LeetCode21   将两个升序链表合并为一个新的升序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。 两个链表的节点数目范围是[0, 50] -100 &lt;&#x3D; Node.val &lt;&#x3D; 100 l1和l2均按非递减顺序排列 from typing import Optional class ListNode:     def __i">
+<meta property="og:type" content="article">
+<meta property="og:title" content="指针与链表">
+<meta property="og:url" content="http://refyuan.github.io/2024/03/27/2024-3-27-%E9%93%BE%E8%A1%A8/index.html">
 <meta property="og:site_name" content="Refyuan">
+<meta property="og:description" content="有序链表的合成示例：LeetCode21   将两个升序链表合并为一个新的升序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。 两个链表的节点数目范围是[0, 50] -100 &lt;&#x3D; Node.val &lt;&#x3D; 100 l1和l2均按非递减顺序排列 from typing import Optional class ListNode:     def __i">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-03-26T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-03-27T09:06:55.345Z">
 <meta property="article:author" content="Sue">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="数据结构与算法">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Refyuan" type="application/atom+xml">
@@ -187,7 +193,7 @@ p.spoiler {
 </div>
 <header id="header">
   
-    <img fetchpriority="high" src="/images/banner.jpg" alt="">
+    <img fetchpriority="high" src="https://github.com/Refyuan/refyuan.github.io/raw/main/covers/miku6.png" alt="指针与链表">
   
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
@@ -196,7 +202,7 @@ p.spoiler {
           
           
             <a href="/" id="logo">
-              <h1>Archives</h1>
+              <h1>指针与链表</h1>
             </a>
           
         
@@ -213,202 +219,165 @@ p.spoiler {
 
         <div id="content" class="outer">
           
-          <section id="main">
-<div class="archives-outer-wrap wow fadeInUp">
-  <div class="tag-wrap">
+          <section id="main"><article id="post-2024-3-27-链表" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner">
+    <div class="article-meta">
+      <div class="article-date wow slideInLeft">
+  <a href="/2024/03/27/2024-3-27-%E9%93%BE%E8%A1%A8/" class="article-date-link">
+    <time datetime="2024-03-26T16:00:00.000Z" itemprop="datePublished">2024-03-27</time>
+  </a>
+</div>
+
+      
+
+    </div>
+    <div class="hr-line"></div>
     
-      <div class="archives-tag-list-item">
-        <a class="archives-tag-list-link" href="/tags/Python/">Python</a>
-      </div>
-    
-      <div class="archives-tag-list-item">
-        <a class="archives-tag-list-link" href="/tags/test/">test</a>
-      </div>
-    
-      <div class="archives-tag-list-item">
-        <a class="archives-tag-list-link" href="/tags/blog/">blog</a>
-      </div>
-    
-      <div class="archives-tag-list-item">
-        <a class="archives-tag-list-link" href="/tags/daily-life/">daily life</a>
-      </div>
-    
-      <div class="archives-tag-list-item">
-        <a class="archives-tag-list-link" href="/tags/Blog/">Blog</a>
-      </div>
-    
-      <div class="archives-tag-list-item">
-        <a class="archives-tag-list-link" href="/tags/MarkDown/">MarkDown</a>
-      </div>
-    
-      <div class="archives-tag-list-item">
-        <a class="archives-tag-list-link" href="/tags/diary/">diary</a>
-      </div>
-    
-      <div class="archives-tag-list-item">
-        <a class="archives-tag-list-link" href="/tags/python/">python</a>
-      </div>
-    
-      <div class="archives-tag-list-item">
-        <a class="archives-tag-list-link" href="/tags/数据结构与算法/">数据结构与算法</a>
-      </div>
-    
-  </div>
-  <div class="category-wrap">
-    
+
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id="有序链表的合成"><a href="#有序链表的合成" class="headerlink" title="有序链表的合成"></a>有序链表的合成</h4><p><em>示例：LeetCode21</em>  </p>
+<p><em>将两个升序链表合并为一个新的升序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。</em></p>
+<p><em>两个链表的节点数目范围是[0, 50]</em></p>
+<p><em>-100 &lt;&#x3D; Node.val &lt;&#x3D; 100</em></p>
+<p><em>l1和l2均按非递减顺序排列</em></p>
+<pre><code>from typing import Optional
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+class Solution:
+    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -&gt; Optional[ListNode]:
+        dummy = ListNode(0)
+        p = dummy
+        while list1 and list2:
+            if list1.val &lt; list2.val:
+                p.next = list1
+                list1 = list1.next
+            else:
+                p.next = list2
+                list2 = list2.next
+
+        if list1:
+            p.next = list1
+            list1 = list1.next
+        else:
+            p.next = list2
+            list2 = list2.next
+        return dummy.next
+</code></pre>
+<h4 id="分隔链表"><a href="#分隔链表" class="headerlink" title="分隔链表"></a>分隔链表</h4><p><em>示例：LeetCode86</em></p>
+<p><em>给你一个链表的头节点 head 和一个特定值 x ，请你对链表进行分隔，使得所有 小于 x 的节点都出现在 大于或等于 x 的节点之前。</em></p>
+<p><em>你应当保留两个分区中每个节点的初始相对位置。</em> </p>
+<pre><code>from typing import Optional
+# Definition for singly-linked list.
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+class Solution:
+    def partition(self, head: Optional[ListNode], x: int) -&gt; Optional[ListNode]:
+        # dummy1=ListNode(None)
+        # dummy2=ListNode(None)
+        # small_ptr=dummy1
+        # big_ptr=dummy2
+        # while head:
+        #     if head.val&lt;x:
+        #         dummy1.next=head
+        #         head=head.next
+        #         small_ptr=small_ptr.next
+        #     else:
+        #         dummy2.next=head
+        #         head = head.next
+        #         big_ptr = big_ptr.next
+        # small_ptr.next=dummy2.next
+        # return small_ptr
+        dummy1 = ListNode(None)
+        small_ptr = dummy1
+        dummy2 = ListNode(None)
+        big_ptr = dummy2
+        ptr = head
+        while ptr:
+            if ptr.val &lt;x:
+                small_ptr.next = ptr
+                small_ptr = small_ptr.next
+            else:
+                big_ptr.next = ptr
+                big_ptr = big_ptr.next
+            temp = ptr.next
+            ptr.next = None
+            ptr = temp
+        small_ptr.next = dummy2.next
+        return dummy1.next
+</code></pre>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://refyuan.github.io/2024/03/27/2024-3-27-%E9%93%BE%E8%A1%A8/" data-id="clu9l1fvw0000d8jhh1eo6dly" data-title="指针与链表" class="article-share-link">Share</a>
+      
+      
+        <a href="/2024/03/27/2024-3-27-%E9%93%BE%E8%A1%A8/#comments" class="article-comment-link">
+          <span class="post-comments-count waline-comment-count" data-path="/2024/03/27/2024-3-27-%E9%93%BE%E8%A1%A8/" itemprop="commentCount"></span>
+          Comments
+        </a>
+      
+      
+      
+      
+        <span class="article-visitor-link">
+          <span class="waline-pageview-count" data-path="/2024/03/27/2024-3-27-%E9%93%BE%E8%A1%A8/">0</span>
+          <em class="post-meta-item-text">Readings</em>
+        </span>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" rel="tag">数据结构与算法</a></li></ul>
+
+
+    </footer>
   </div>
   
+    
+  <nav id="article-nav" class="wow fadeInUp">
+    
+    
+    <div class="article-nav-link-wrap article-nav-link-right">
+      
+        <img data-src="https://github.com/Refyuan/refyuan.github.io/raw/main/covers/mirai.jpg" data-sizes="auto" alt="Daily Life" class="lazyload">
+      
+      <a href="/2024/03/22/2024-3-22-%E6%9D%82%E8%B0%88/"></a>
+      <div class="article-nav-caption">Older</div>
+      <h3 class="article-nav-title">
+        
+          Daily Life
+        
+      </h3>
+    </div>
+    
+  </nav>
+
+
   
-    
-    
-      
-      
-      <section class="archives-wrap wow fadeInUp">
-        <div class="archive-year-wrap">
-          <a href="/archives/2024" class="archive-year">2024</a>
-        </div>
-        <div class="archives">
-          <ul>
-            
-            <li class="archive-article">
-  <div class="archive-article-date-wrap">
-    <a href="/2024/03/27/2024-3-27-%E9%93%BE%E8%A1%A8/">
-      <time class="dt-published" datetime="2024-03-26T16:00:00.000Z" itemprop="datePublished">03-27</time>
-    </a>
-  </div>
-  <div class="archive-article-title-wrap">
-    
-      
-        <a class="archive-article-title" href="/2024/03/27/2024-3-27-%E9%93%BE%E8%A1%A8/">指针与链表</a>
-      
-    
-  </div>
-</li>
+</article>
 
-            
-    
-    
-            <li class="archive-article">
-  <div class="archive-article-date-wrap">
-    <a href="/2024/03/22/2024-3-22-%E6%9D%82%E8%B0%88/">
-      <time class="dt-published" datetime="2024-03-21T16:00:00.000Z" itemprop="datePublished">03-22</time>
-    </a>
-  </div>
-  <div class="archive-article-title-wrap">
-    
-      
-        <a class="archive-article-title" href="/2024/03/22/2024-3-22-%E6%9D%82%E8%B0%88/">Daily Life</a>
-      
-    
-  </div>
-</li>
 
-            
-    
-    
-            <li class="archive-article">
-  <div class="archive-article-date-wrap">
-    <a href="/2024/03/20/2024-3-20-MarkDown%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97/">
-      <time class="dt-published" datetime="2024-03-19T16:00:00.000Z" itemprop="datePublished">03-20</time>
-    </a>
-  </div>
-  <div class="archive-article-title-wrap">
-    
-      
-        <a class="archive-article-title" href="/2024/03/20/2024-3-20-MarkDown%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97/">MarkDown的使用</a>
-      
-    
-  </div>
-</li>
+  <div id="comments" class="wcomment"></div>
 
-            
-    
-    
-            <li class="archive-article">
-  <div class="archive-article-date-wrap">
-    <a href="/2024/03/19/%E4%B8%93%E7%94%A8%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3/">
-      <time class="dt-published" datetime="2024-03-18T16:00:00.000Z" itemprop="datePublished">03-19</time>
-    </a>
-  </div>
-  <div class="archive-article-title-wrap">
-    
-      
-        <a class="archive-article-title" href="/2024/03/19/%E4%B8%93%E7%94%A8%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3/">测试功能专用文档</a>
-      
-    
-  </div>
-</li>
 
-            
-    
-    
-            <li class="archive-article">
-  <div class="archive-article-date-wrap">
-    <a href="/2024/03/17/2024-3-17-%E4%BB%8E%E5%A3%B9%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%94%9F%E6%B4%BB/">
-      <time class="dt-published" datetime="2024-03-16T16:00:00.000Z" itemprop="datePublished">03-17</time>
-    </a>
-  </div>
-  <div class="archive-article-title-wrap">
-    
-      
-        <a class="archive-article-title" href="/2024/03/17/2024-3-17-%E4%BB%8E%E5%A3%B9%E5%BC%80%E5%A7%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%94%9F%E6%B4%BB/">从壹开始的blog生活</a>
-      
-    
-  </div>
-</li>
-
-            
-    
-    
-            <li class="archive-article">
-  <div class="archive-article-date-wrap">
-    <a href="/2024/03/16/hello-world/">
-      <time class="dt-published" datetime="2024-03-16T07:29:42.836Z" itemprop="datePublished">03-16</time>
-    </a>
-  </div>
-  <div class="archive-article-title-wrap">
-    
-      
-        <a class="archive-article-title" href="/2024/03/16/hello-world/">Hello World</a>
-      
-    
-  </div>
-</li>
-
-            
-    
-    
-            <li class="archive-article">
-  <div class="archive-article-date-wrap">
-    <a href="/2024/03/14/2024-3-14-To%20begin%20with/">
-      <time class="dt-published" datetime="2024-03-13T16:00:00.000Z" itemprop="datePublished">03-14</time>
-    </a>
-  </div>
-  <div class="archive-article-title-wrap">
-    
-      
-        <a class="archive-article-title" href="/2024/03/14/2024-3-14-To%20begin%20with/">从零开始的Python生活</a>
-      
-    
-  </div>
-</li>
-
-            
-            
-          </ul>
-        </div>
-      </section>
-  
-  </div>
 
 
 
 </section>
           
             <aside id="sidebar">
-  <div class="sidebar-wrap wow fadeInRight ">
+  <div class="sidebar-wrap wow fadeInRight wrap-sticky">
     
-      <div class="sidebar-author">
+      <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">Contents</h3>
+  <div class="sidebar-toc-wrapper"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8%E7%9A%84%E5%90%88%E6%88%90"><span class="toc-number">1.</span> <span class="toc-text">有序链表的合成</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E9%9A%94%E9%93%BE%E8%A1%A8"><span class="toc-number">2.</span> <span class="toc-text">分隔链表</span></a></li></ol></div>
+</div>
+</div>
+      <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
   <img data-src="/avatar/avatar.jpg" data-sizes="auto" alt="Sue" class="lazyload">
   <div class="sidebar-author-name">Sue</div>
   <div class="sidebar-description"></div>
@@ -457,8 +426,13 @@ p.spoiler {
     </div>
   
 </div>
-
+</div>
     
+    
+      <div class="sidebar-btn-wrapper" style="position:static">
+        <div class="sidebar-toc-btn current"></div>
+        <div class="sidebar-common-btn"></div>
+      </div>
     
   </div>
 
@@ -517,7 +491,12 @@ p.spoiler {
       <nav id="mobile-nav">
   <div class="sidebar-wrap">
     
-      <div class="sidebar-author">
+      <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">Contents</h3>
+  <div class="sidebar-toc-wrapper"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8%E7%9A%84%E5%90%88%E6%88%90"><span class="toc-number">1.</span> <span class="toc-text">有序链表的合成</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E9%9A%94%E9%93%BE%E8%A1%A8"><span class="toc-number">2.</span> <span class="toc-text">分隔链表</span></a></li></ol></div>
+</div>
+</div>
+      <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
   <img data-src="/avatar/avatar.jpg" data-sizes="auto" alt="Sue" class="lazyload">
   <div class="sidebar-author-name">Sue</div>
   <div class="sidebar-description"></div>
@@ -566,9 +545,14 @@ p.spoiler {
     </div>
   
 </div>
-
+</div>
     
   </div>
+  
+    <div class="sidebar-btn-wrapper">
+      <div class="sidebar-toc-btn current"></div>
+      <div class="sidebar-common-btn"></div>
+    </div>
   
 </nav>
 
