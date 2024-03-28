@@ -33,7 +33,7 @@
 <meta property="og:description" content="有序链表的合成示例：LeetCode21   将两个升序链表合并为一个新的升序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。 两个链表的节点数目范围是[0, 50] -100 &lt;&#x3D; Node.val &lt;&#x3D; 100 l1和l2均按非递减顺序排列 为了加深自己的理解写了两次，发现虽然算法思路基本一致，但用双指针时间复杂度更低，用迭代空间复杂度更低。  双指">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-03-26T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-03-28T06:58:20.741Z">
+<meta property="article:modified_time" content="2024-03-28T08:30:28.283Z">
 <meta property="article:author" content="Sue">
 <meta property="article:tag" content="python">
 <meta property="article:tag" content="数据结构与算法">
@@ -302,6 +302,30 @@ class Solution:
             list2 = list2.next
         return dummy.next
 </code></pre>
+<p>受力扣86题影响，为避免进入循环，可每次手动设定原链表指针指空。本题中不会出现环，但为了自己养成良好习惯(<del>懒于思考成环情况</del>)，故可以将方法写为：</p>
+<pre><code>def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -&gt; Optional[ListNode]:
+    dummy=ListNode(None)
+    p=dummy
+    p1=list1
+    p2=list2
+    while p1 and p2:
+        if p1.val&lt;p2.val:
+            temp=p1.next
+            p.next=p1
+            p1.next=None
+            p1=temp
+        else:
+            temp=p2.next
+            p.next=p2
+            p2.next=None
+            p2=temp
+        p=p.next
+    if p1:
+        p.next = p1
+    else:
+        p.next = p2
+    return dummy.next
+</code></pre>
 <h4 id="分隔链表"><a href="#分隔链表" class="headerlink" title="分隔链表"></a>分隔链表</h4><p><em>示例：LeetCode86</em></p>
 <p><em>给你一个链表的头节点 head 和一个特定值 x ，请你对链表进行分隔，使得所有 小于 x 的节点都出现在 大于或等于 x 的节点之前。</em></p>
 <p><em>你应当保留两个分区中每个节点的初始相对位置。</em> </p>
@@ -521,7 +545,7 @@ class Solution:
       
         <div>
           <span class="icon-brush"></span>
-          4.1k
+          4.3k
           &nbsp;|&nbsp;
           <span class="icon-coffee"></span>
           00:15
