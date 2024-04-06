@@ -33,7 +33,7 @@
 <meta property="og:description" content="从经典爬楼梯问题引入。  leetcode70 假设你正在爬楼梯。需要 n 阶你才能到达楼顶。 每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？  # class Solution: #     def climbStairs(self, n: int) -&gt; int: #         if n&#x3D;&#x3D;1: #             return 1 #">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-04-03T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-04-04T14:58:11.892Z">
+<meta property="article:modified_time" content="2024-04-05T06:36:06.687Z">
 <meta property="article:author" content="Sue">
 <meta property="article:tag" content="python">
 <meta property="article:tag" content="数据结构与算法">
@@ -279,6 +279,53 @@ class Solution:
 <p>给出被注掉的代码。</p>
 <p>但因其时间复杂度为O(2^n)，测试用例提交到44就超时了，考虑优化。</p>
 <p>引入哈希表实现记忆化搜索。</p>
+<ol start="2">
+<li></li>
+</ol>
+<p>打家劫舍问题。</p>
+<blockquote>
+<p>leetcode198</p>
+<p>你是一个专业的小偷，计划偷窃沿街的房屋。</p>
+<p>每间房内都藏有一定的现金，</p>
+<p>影响你偷窃的唯一制约因素就是相邻的房屋装有相互连通的防盗系统，</p>
+<p>如果两间相邻的房屋在同一晚上被小偷闯入，系统会自动报警。</p>
+<p>给定一个代表每个房屋存放金额的非负整数数组，</p>
+<p>计算你 不触动警报装置的情况下 ，一夜之内能够偷窃到的最高金额。</p>
+</blockquote>
+<pre><code>class Solution:
+    def rob(self, nums: List[int]) -&gt; int:
+        n=len(nums)
+        cache=[-1]*n
+        def dfs(i:int):
+            if i&lt;0:
+                return 0
+            if cache[i]!=-1:
+                return cache[i]
+            else:
+                cache[i]=max(dfs(i-1),dfs(i-2)+nums[i])
+                return cache[i]
+        return dfs(n-1)
+</code></pre>
+<p>值得注意的是，一定要考虑边界。</p>
+<p>这是我第一次写cache的代码，当测试用例为[0]时报错。</p>
+<p>原因即是cache&#x3D;[-1]，而cache[0]在比较dfs(i-1)与dfs(i-2)+nums[i]时</p>
+<p>dfs(i-1)&#x3D;&#x3D;0,</p>
+<p>但dfs(i-2)在做if判断时会先进入上层的cache[-2]，而cache里只有一个元素，所以超出了索引值，报错。</p>
+<pre><code>class Solution:
+    def rob(self, nums: List[int]) -&gt; int:
+        n=len(nums)
+        cache=[-1]*n
+        def dfs(i:int):
+            if cache[i]!=-1:
+                return cache[i]
+            if i&lt;0:
+                return 0
+            else:
+                cache[i]=max(dfs(i-1),dfs(i-2)+nums[i])
+                return cache[i]
+        return dfs(n-1)
+</code></pre>
+<p>仔细看两段代码的区别，只有判断的顺序问题。引以为戒！</p>
 
       
     </div>
@@ -314,7 +361,7 @@ class Solution:
       
         
         
-          <img data-src="/covers/miku7.jpg" data-sizes="auto" alt="" class="lazyload">
+          <img data-src="/covers/lishanweilai.gif" data-sizes="auto" alt="" class="lazyload">
         
       
       <a href="/2024/04/03/2024-4-3-%E6%A0%91%E8%8E%93%E6%B4%BE/"></a>
@@ -435,10 +482,10 @@ class Solution:
       
         <div>
           <span class="icon-brush"></span>
-          5.4k
+          5.8k
           &nbsp;|&nbsp;
           <span class="icon-coffee"></span>
-          00:20
+          00:21
         </div>
       
       
