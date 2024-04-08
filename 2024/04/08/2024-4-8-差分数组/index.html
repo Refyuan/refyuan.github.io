@@ -11,7 +11,7 @@
 
   
   <title>
-    Daily Life |
+    差分数组 |
     
     Refyuan
   </title>
@@ -25,23 +25,19 @@
   
 <link rel="stylesheet" href="/css/loader.css">
 
-  <meta name="description" content="2024-3-22大学上课，影响学习。我是不明白为什么大三下了给排这么多课，一周四节早八，甚至有一天满课。物联网这专业挂在计算机学院，说是计算机类但是没计算机认可度高，课还比计算机多。 很惶恐，因为比赛和考研焦虑。又开始觉得自己哪儿哪儿都不好了，我又不行了，不配拥有爱，关怀，和他人的信任。用流行的话来说就是有很强的不配得感。自我调理的结果是觉得自己努力少了，把时间都用在卷上就不会胡思乱想了。">
+  <meta name="description" content="leetcode1190 这里有 n 个航班，它们分别从 1 到 n 进行编号。 有一份航班预订表 bookings ， 表中第 i 条预订记录 bookings[i] &#x3D; [firsti, lasti, seatsi] 意味着在从 firsti 到 lasti （包含 firsti 和 lasti ）的 每个航班 上预订了 seatsi 个座位。 请你返回一个长度为 n 的数组 ans">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Daily Life">
-<meta property="og:url" content="http://refyuan.github.io/2024/03/22/2024-3-22-%E6%9D%82%E8%B0%88/index.html">
+<meta property="og:title" content="差分数组">
+<meta property="og:url" content="http://refyuan.github.io/2024/04/08/2024-4-8-%E5%B7%AE%E5%88%86%E6%95%B0%E7%BB%84/index.html">
 <meta property="og:site_name" content="Refyuan">
-<meta property="og:description" content="2024-3-22大学上课，影响学习。我是不明白为什么大三下了给排这么多课，一周四节早八，甚至有一天满课。物联网这专业挂在计算机学院，说是计算机类但是没计算机认可度高，课还比计算机多。 很惶恐，因为比赛和考研焦虑。又开始觉得自己哪儿哪儿都不好了，我又不行了，不配拥有爱，关怀，和他人的信任。用流行的话来说就是有很强的不配得感。自我调理的结果是觉得自己努力少了，把时间都用在卷上就不会胡思乱想了。">
+<meta property="og:description" content="leetcode1190 这里有 n 个航班，它们分别从 1 到 n 进行编号。 有一份航班预订表 bookings ， 表中第 i 条预订记录 bookings[i] &#x3D; [firsti, lasti, seatsi] 意味着在从 firsti 到 lasti （包含 firsti 和 lasti ）的 每个航班 上预订了 seatsi 个座位。 请你返回一个长度为 n 的数组 ans">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://github.com/Refyuan/refyuan.github.io/raw/main/covers/qianzhi.jpg">
-<meta property="og:image" content="https://github.com/Refyuan/refyuan.github.io/raw/main/covers/lishanweilai.gif">
-<meta property="og:image" content="https://github.com/Refyuan/refyuan.github.io/raw/main/covers/chikawa.jpg">
-<meta property="og:image" content="https://github.com/Refyuan/refyuan.github.io/raw/main/covers/spotlight.jpg">
-<meta property="article:published_time" content="2024-03-21T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-04-06T11:11:23.310Z">
+<meta property="article:published_time" content="2024-04-07T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-04-08T12:17:49.149Z">
 <meta property="article:author" content="Sue">
-<meta property="article:tag" content="diary">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="数据结构与算法">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://github.com/Refyuan/refyuan.github.io/raw/main/covers/qianzhi.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Refyuan" type="application/atom+xml">
   
@@ -201,7 +197,7 @@ p.spoiler {
 </div>
 <header id="header">
   
-    <img fetchpriority="high" src="https://github.com/Refyuan/refyuan.github.io/raw/main/covers/mirai.jpg" alt="Daily Life">
+    <img fetchpriority="high" src="https://github.com/Refyuan/refyuan.github.io/raw/main/covers/fulilian1.png" alt="差分数组">
   
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
@@ -210,7 +206,7 @@ p.spoiler {
           
           
             <a href="/" id="logo">
-              <h1>Daily Life</h1>
+              <h1>差分数组</h1>
             </a>
           
         
@@ -227,12 +223,12 @@ p.spoiler {
 
         <div id="content" class="outer">
           
-          <section id="main"><article id="post-2024-3-22-杂谈" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+          <section id="main"><article id="post-2024-4-8-差分数组" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-inner">
     <div class="article-meta">
       <div class="article-date wow slideInLeft">
-  <a href="/2024/03/22/2024-3-22-%E6%9D%82%E8%B0%88/" class="article-date-link">
-    <time datetime="2024-03-21T16:00:00.000Z" itemprop="datePublished">2024-03-22</time>
+  <a href="/2024/04/08/2024-4-8-%E5%B7%AE%E5%88%86%E6%95%B0%E7%BB%84/" class="article-date-link">
+    <time datetime="2024-04-07T16:00:00.000Z" itemprop="datePublished">2024-04-08</time>
   </a>
 </div>
 
@@ -244,94 +240,47 @@ p.spoiler {
 
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h5 id="2024-3-22"><a href="#2024-3-22" class="headerlink" title="2024-3-22"></a>2024-3-22</h5><p>大学上课，影响学习。我是不明白为什么大三下了给排这么多课，一周四节早八，甚至有一天满课。物联网这专业挂在计算机学院，说是计算机类但是没计算机认可度高，课还比计算机多。</p>
-<p>很惶恐，因为比赛和考研焦虑。又开始觉得自己哪儿哪儿都不好了，我又不行了，不配拥有爱，关怀，和他人的信任。用流行的话来说就是有很强的不配得感。自我调理的结果是觉得自己努力少了，把时间都用在卷上就不会胡思乱想了。  </p>
-<p>挪瓦的冰蓝椰子水好难喝，店员态度也不怎么样，拉黑。  </p>
-<p><img src="https://github.com/Refyuan/refyuan.github.io/raw/main/covers/qianzhi.jpg"></p>
-<hr>
-<h5 id="2024-3-23"><a href="#2024-3-23" class="headerlink" title="2024-3-23"></a>2024-3-23</h5><p>寒假期间家里人带我理发，我那时不想剪，象征性要求剪短5cm。家里人说再剪些吧，还是太长了。  </p>
-<p>我说我不觉得长，我习惯这么长了。  </p>
-<p>听罢理发师露出神秘莫测的微笑，肯定地说不是这个原因。  </p>
-<p>疑惑，他不会以为我是受什么情伤还是为了某个人才不剪的吧。  </p>
-<p>然后我返校的第一个周末就嫌洗头麻烦，把头发剪了。从长发变成蘑菇头，去了三分之二。  </p>
-<p>室友看到我剪短了很惊诧，问我不心疼吗。我笑说不心疼呀。  </p>
-<p>剪完几周了，感想就是短发洗头很爽，再短点儿应该更爽。   </p>
-<p><img src="https://github.com/Refyuan/refyuan.github.io/raw/main/covers/lishanweilai.gif"></p>
-<hr>
-<h5 id="2024-3-25"><a href="#2024-3-25" class="headerlink" title="2024-3-25"></a>2024-3-25</h5><p>破案了，是睡眠不足导致的。午睡前边看书边恨这个世界，睡了半小时起来觉得自己又是幸福小孩了，充满干劲。  </p>
-<p>晚上骑行了1h，心态越来越平和。以前总是想得太多而做得太少。我相信只要开始做了，那么一切都会好的。  </p>
-<p><img src="https://github.com/Refyuan/refyuan.github.io/raw/main/covers/chikawa.jpg"></p>
-<hr>
-<h5 id="2024-3-26"><a href="#2024-3-26" class="headerlink" title="2024-3-26"></a>2024-3-26</h5><p>可供了解的情报：  </p>
-<p>酥饼里脊关门时间在20：00~20：50。</p>
-<p>每天抽点儿时间补眠&#x2F;骑行会让自己心态放平。  </p>
-<p>事情多了无可避免非常想摄入高热量炸物，这样不好。  </p>
-<p>目前姑且认为md格式无法不借助插件实现起段落前空两格。等比赛告一段落再美化吧。</p>
-<hr>
-<h5 id="2024-3-27"><a href="#2024-3-27" class="headerlink" title="2024-3-27"></a>2024-3-27</h5><p>这几天在学数据结构与算法中的“链表”。</p>
-<p>起因是看王道考研资料，我连线性表里的指针都半懂不懂，于是查查搜搜，指针与链表相辅相成，然后两天就刷了两道题。</p>
-<p>每次自己上手写时都要掰扯半天逻辑关系。不过写完之后发现自己又进步了，好事。</p>
-<hr>
-<h5 id="2024-3-31"><a href="#2024-3-31" class="headerlink" title="2024-3-31"></a>2024-3-31</h5><p>我把自己的抑郁情绪归结为想得太多做得太少，焦虑情绪归结为车骑少了。</p>
-<hr>
-<h5 id="2024-4-2"><a href="#2024-4-2" class="headerlink" title="2024-4-2"></a>2024-4-2</h5><p>今日骑车溜进了隔壁。因为没扫码保安大叔想拦我，但是我骑太快了没拦住。自己因为太心虚了骑到南门就出来了。</p>
-<p>沿着小吃街溜达，有好朋友问我星穹铁道错误代码，我指指点点了一会儿结果啥忙也没帮上。</p>
-<p>与此同时另外一边，一位软工同学告诉我她正在准备预推免面试，结束了就把资料都给我。</p>
-<p>有明显的落差感，感觉自己什么都做不到，而身边的大伙都在走向更光明的未来。</p>
-<p>提溜了四袋海河奶回来了。好像只有考研上岸才能弥补大学的遗憾了。</p>
-<hr>
-<h5 id="2024-4-3"><a href="#2024-4-3" class="headerlink" title="2024-4-3"></a>2024-4-3</h5><p>晨起看朋友圈，第一条就是有人上岸复旦了。我评论了恭喜，然后决定完全关闭朋友圈。</p>
-<p>恭喜是真的恭喜，年纪渐长，见到大伙的成功只会开心赞叹“好棒，这是你们应得的”，激不起一丝嫉妒的情绪。</p>
-<p>只是自己这关好难过呀。脑子里有个声音充当了家长的角色。</p>
-<p>你看小a，你们大一时候不是很熟吗，他上岸复旦了你呢？</p>
-<p>你看小b，你们一起出去玩，她打比赛做开发，保研就业两手抓，你呢？</p>
-<p>我呢？我想说我不知道，但实际上我知道。</p>
-<p>我卷了一年绩点，打了两年游戏，一手促成自己玩没玩好，学也没学好的现状。</p>
-<p>作为学计算机的，连数据结构都不会，比跨考的还零基础。</p>
-<p>作为游戏玩家，好像还行？但单机游戏不能当饭吃啊。</p>
-<p>up主确实可以作为副业，不过没人会喜欢满口脏话的吧，乐。</p>
-<p>我是客观意义上的互联网鼠鼠，看着成功的大伙，自己阴暗地缩进没有光的下水道。</p>
-<p>请阳光的你们不要想起我。我没有勇气面对自己的落差自己的失败。高中的困境我始终没有逃脱。</p>
-<p>今时与往日稍有的不同就是，我愿意稍微努力一点，就一点点。</p>
-<p>大伙的光照得那样恣意，无人在意角落里鼠鼠的毛发是否比从前光亮。</p>
-<p>没关系。鼠鼠自己会在意的。</p>
-<hr>
-<h5 id="2024-4-4"><a href="#2024-4-4" class="headerlink" title="2024-4-4"></a>2024-4-4</h5><p>他人之得不必视为自己之失。我告诉自己。</p>
-<p>如果有人类因为所谓能力在一部分人类面前卑躬屈膝，那ta一定会在另一部分人类面前趾高气扬。</p>
-<hr>
-<p>前段时间的更新是逼着自己抱着书和博客硬啃，确实有进步，但是自己心态很崩。</p>
-<p>这个算法的概念我明白了，但是怎么实现呢？</p>
-<pre><code>def search(self,question) -&gt; answer:
-    if question in blog:
-        return blog(answer)
-    elif question in book:
-        return book(answer)
-    else:
-        ask ChatGPT
-        return self.search(new question from ChatGPT)
+        <p>leetcode1190</p>
+<p>这里有 n 个航班，它们分别从 1 到 n 进行编号。</p>
+<p>有一份航班预订表 bookings ，</p>
+<p>表中第 i 条预订记录 bookings[i] &#x3D; [firsti, lasti, seatsi] 意味着在从 firsti 到 lasti （包含 firsti 和 lasti ）的 每个航班 上预订了 seatsi 个座位。</p>
+<p>请你返回一个长度为 n 的数组 answer，里面的元素是每个航班预定的座位总数。</p>
+<pre><code>class Solution:
+    def corpFlightBookings(self, bookings: List[List[int]], n: int) -&gt; List[int]:
+        a = [0] * (n + 1)
+        S = [0]
+        for change in bookings:
+            first, last, inc = change[0], change[1], change[2]
+            a[first - 1] += inc
+            a[last] -= inc
+        for i in range(1, n + 1):
+            S.append(S[i - 1] + a[i - 1])
+        return S[1:]
 </code></pre>
-<p>敲的傻B伪代码给自己看乐了。乐。</p>
-<p>人与计算机的不同在于，人会抱怨。</p>
-<p>解法没问题的情况下计算机会忠诚地执行每一步，耐心地回溯直到解决。</p>
-<p>我自己则是回溯到上一层就开始烦了，开始：</p>
-<p>淦哦为什么这么多不知道的事儿——为什么查了这么多依然没有解决当下的问题——烦内！</p>
-<hr>
-<p><img src="https://github.com/Refyuan/refyuan.github.io/raw/main/covers/spotlight.jpg"></p>
-<p>今天在b站找到了一位讲得不错的算法入门up：灵茶山艾府。</p>
-<p>感慨师傅领进门还是重要的，拨云见雾了。</p>
-<p>看视频就：なるほど！非常简单，我简直就是天才！（雾）</p>
-<p>再敲几行，爽学！</p>
-<h5 id="2024-4-6"><a href="#2024-4-6" class="headerlink" title="2024-4-6"></a>2024-4-6</h5><p>葬送的芙莉莲为什么是神ヾ(´ωﾟ｀)</p>
-<hr>
+<p>差分数组，个人是用数列理解的。</p>
+<p>因为差分数组的公式长这样：</p>
+<blockquote>
+<p>diff[i]&#x3D;nums[i]-nums[i-1]</p>
+</blockquote>
+<p>而数列与前n项和相关的公式长这样：</p>
+<blockquote>
+<p>a[n]&#x3D;S[n]-S[n-1]</p>
+</blockquote>
+<p><del>好难看啊,等比赛完事就配LaTeX打公式</del></p>
+<p>原数组可以看作数列中的S[n]，差分数组就是a[n]。</p>
+<p>原数组的元素即为差分数组的前n项和。</p>
+<p>值得注意的是本题中的角标，数组是从0开始的，航班序号是从1开始的。</p>
+<p>调试了半天才发现问题出在倒数第二行，虽然都是i-1，但</p>
+<p>S[i-1]的意义是S[i]的前序，a[i-1]的意义是第i个航班，由于数组特性需用i-1角标表示。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://refyuan.github.io/2024/03/22/2024-3-22-%E6%9D%82%E8%B0%88/" data-id="clu2ctitv0000cgjh3g3mfr8d" data-title="Daily Life" class="article-share-link">Share</a>
+      <a data-url="http://refyuan.github.io/2024/04/08/2024-4-8-%E5%B7%AE%E5%88%86%E6%95%B0%E7%BB%84/" data-id="cluqx5kvn0000ecjhhd7cd8t5" data-title="差分数组" class="article-share-link">Share</a>
       
       
-        <a href="/2024/03/22/2024-3-22-%E6%9D%82%E8%B0%88/#comments" class="article-comment-link">
-          <span class="post-comments-count waline-comment-count" data-path="/2024/03/22/2024-3-22-%E6%9D%82%E8%B0%88/" itemprop="commentCount"></span>
+        <a href="/2024/04/08/2024-4-8-%E5%B7%AE%E5%88%86%E6%95%B0%E7%BB%84/#comments" class="article-comment-link">
+          <span class="post-comments-count waline-comment-count" data-path="/2024/04/08/2024-4-8-%E5%B7%AE%E5%88%86%E6%95%B0%E7%BB%84/" itemprop="commentCount"></span>
           Comments
         </a>
       
@@ -339,12 +288,12 @@ p.spoiler {
       
       
         <span class="article-visitor-link">
-          <span class="waline-pageview-count" data-path="/2024/03/22/2024-3-22-%E6%9D%82%E8%B0%88/">0</span>
+          <span class="waline-pageview-count" data-path="/2024/04/08/2024-4-8-%E5%B7%AE%E5%88%86%E6%95%B0%E7%BB%84/">0</span>
           <em class="post-meta-item-text">Readings</em>
         </span>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/diary/" rel="tag">diary</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" rel="tag">数据结构与算法</a></li></ul>
 
 
     </footer>
@@ -353,29 +302,16 @@ p.spoiler {
     
   <nav id="article-nav" class="wow fadeInUp">
     
-      <div class="article-nav-link-wrap article-nav-link-left">
-        
-          <img data-src="https://github.com/Refyuan/refyuan.github.io/raw/main/covers/miku6.jpg" data-sizes="auto" alt="指针与链表" class="lazyload">
-        
-        <a href="/2024/03/27/2024-3-27-%E9%93%BE%E8%A1%A8/"></a>
-        <div class="article-nav-caption">Newer</div>
-        <h3 class="article-nav-title">
-          
-            指针与链表
-          
-        </h3>
-      </div>
-    
     
     <div class="article-nav-link-wrap article-nav-link-right">
       
-        <img data-src="https://github.com/Refyuan/refyuan.github.io/raw/main/covers/miku5.png" data-sizes="auto" alt="MarkDown的使用" class="lazyload">
+        <img data-src="https://github.com/Refyuan/refyuan.github.io/raw/main/covers/jk0.jpg" data-sizes="auto" alt="递推、递归与动态规划" class="lazyload">
       
-      <a href="/2024/03/20/2024-3-20-MarkDown%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97/"></a>
+      <a href="/2024/04/04/2024-4-4-%E9%80%92%E6%8E%A8%E4%B8%8E%E9%80%92%E5%BD%92/"></a>
       <div class="article-nav-caption">Older</div>
       <h3 class="article-nav-title">
         
-          MarkDown的使用
+          递推、递归与动态规划
         
       </h3>
     </div>
@@ -400,7 +336,7 @@ p.spoiler {
     
       <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
   <h3 class="toc-title">Contents</h3>
-  <div class="sidebar-toc-wrapper"><ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#2024-3-22"><span class="toc-number">1.</span> <span class="toc-text">2024-3-22</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2024-3-23"><span class="toc-number">2.</span> <span class="toc-text">2024-3-23</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2024-3-25"><span class="toc-number">3.</span> <span class="toc-text">2024-3-25</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2024-3-26"><span class="toc-number">4.</span> <span class="toc-text">2024-3-26</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2024-3-27"><span class="toc-number">5.</span> <span class="toc-text">2024-3-27</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2024-3-31"><span class="toc-number">6.</span> <span class="toc-text">2024-3-31</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2024-4-2"><span class="toc-number">7.</span> <span class="toc-text">2024-4-2</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2024-4-3"><span class="toc-number">8.</span> <span class="toc-text">2024-4-3</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2024-4-4"><span class="toc-number">9.</span> <span class="toc-text">2024-4-4</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2024-4-6"><span class="toc-number">10.</span> <span class="toc-text">2024-4-6</span></a></li></ol></div>
+  <div class="sidebar-toc-wrapper"></div>
 </div>
 </div>
       <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
@@ -519,7 +455,7 @@ p.spoiler {
     
       <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
   <h3 class="toc-title">Contents</h3>
-  <div class="sidebar-toc-wrapper"><ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#2024-3-22"><span class="toc-number">1.</span> <span class="toc-text">2024-3-22</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2024-3-23"><span class="toc-number">2.</span> <span class="toc-text">2024-3-23</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2024-3-25"><span class="toc-number">3.</span> <span class="toc-text">2024-3-25</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2024-3-26"><span class="toc-number">4.</span> <span class="toc-text">2024-3-26</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2024-3-27"><span class="toc-number">5.</span> <span class="toc-text">2024-3-27</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2024-3-31"><span class="toc-number">6.</span> <span class="toc-text">2024-3-31</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2024-4-2"><span class="toc-number">7.</span> <span class="toc-text">2024-4-2</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2024-4-3"><span class="toc-number">8.</span> <span class="toc-text">2024-4-3</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2024-4-4"><span class="toc-number">9.</span> <span class="toc-text">2024-4-4</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2024-4-6"><span class="toc-number">10.</span> <span class="toc-text">2024-4-6</span></a></li></ol></div>
+  <div class="sidebar-toc-wrapper"></div>
 </div>
 </div>
       <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
