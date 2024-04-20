@@ -232,14 +232,20 @@ p.spoiler {
     <div class="post-info">
       <div class="post-meta">
         <span><span class="icon-calendar"></span>2024-04-20</span>
-        <span><span class="icon-pencil"></span>20 words</span>
+        <span><span class="icon-pencil"></span>236 words</span>
         <span><span class="icon-clock"></span>1 min</span>
       </div>
       <h2 class="post-title">数据结构笔记</h2>
       <article class="post-article">
         
-          指针与链表基础对于2021年408真题第一题我有疑惑：
-
+          指针与链表基础今日学链表，对于2021年408真题第一题我有疑惑：
+h指向头结点head，为何h.next不是头结点而是首元结点？
+原因是所谓指向，指的是前者保存后者的地址，
+结点1指向结点2，意思是结点1的指针域保存结点2的地址，这样就可以通过结点1访问到结点2了。
+而指针h指向结点head，意思就是指针h保存了结点head的地址，通过h可以直接访问到head结点。
+刚接触C语言，“指针”“指向”确实有点难理解，所以现在我把题目里的“指向”手动翻译成“保存地址”。
+这样就很容易解释我的疑惑了。h自身就保存了head的地址，首元结点是头结点的下一个结点，自然是h.next。
+把指向写成语句即是
         
       </article>
     </div>
@@ -667,7 +673,7 @@ Run server1$ hexo ser
       
         <div>
           <span class="icon-brush"></span>
-          8.4k
+          8.6k
           &nbsp;|&nbsp;
           <span class="icon-coffee"></span>
           00:30
