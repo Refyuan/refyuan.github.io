@@ -232,7 +232,7 @@ p.spoiler {
     <div class="post-info">
       <div class="post-meta">
         <span><span class="icon-calendar"></span>2025-02-28</span>
-        <span><span class="icon-pencil"></span>83 words</span>
+        <span><span class="icon-pencil"></span>169 words</span>
         <span><span class="icon-clock"></span>1 min</span>
       </div>
       <h2 class="post-title">打赢复活赛了</h2>
@@ -240,6 +240,9 @@ p.spoiler {
         
           离我第一次搭博客已经过去快一年了。这一年间发生了不少事，多了不少经历。往事休要再提，开启Java生活吧。
 考研没过国家线，放弃了。命里无时莫强求。所以我在2月4号开始了自己的春招。希望能有好结果。
+陆陆续续投了一百多家，因为前期没有详细建表所以没有统计出具体数字，粗略估计有一百三四十家。
+目前进度：米哈游已笔试，京东已笔试，美团已笔试，三七互娱已笔试。
+4399笔试挂，EcoFlow正浩一面挂，拼多多即将一面。
 
         
       </article>
@@ -257,7 +260,7 @@ p.spoiler {
       
         
         
-          <img data-src="https://github.com/Refyuan/refyuan.github.io/raw/main/covers/banner.jpg" data-sizes="auto" alt="" class="lazyload">
+          <img data-src="/covers/zspms.png" data-sizes="auto" alt="" class="lazyload">
         
       
     </div>
@@ -453,9 +456,39 @@ class Solution:
   
   <div class="post-wrap-right wow fadeInUp">
     
-    <a class="post-link" href="/2024/04/04/2024-4-4-%E9%80%92%E6%8E%A8%E4%B8%8E%E9%80%92%E5%BD%92/"></a>
+    <a class="post-link" href="/2024/04/08/2025-3-14-%E5%8F%8C%E6%8C%87%E9%92%88-happy%20pi%20day/"></a>
     
     <div class="post-cover-right">
+      
+        <img data-src="https://github.com/Refyuan/refyuan.github.io/raw/main/covers/fulilian7.jpg" data-sizes="auto" alt="差分数组" class="lazyload">
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2024-04-08</span>
+        <span><span class="icon-pencil"></span>300 words</span>
+        <span><span class="icon-clock"></span>1 min</span>
+      </div>
+      <h2 class="post-title">差分数组</h2>
+      <article class="post-article">
+        
+          滑动窗口给定一个字符串s ，请你找出其中不含有重复字符的最长子串的长度。
+示例：LeetCode3
+1234567891011class Solution:    def lengthOfLongestSubstring(self, s: str) -&amp;gt; int:        res=0        str_set=&amp;#123;&amp;#125;        left=0        for i in range(len(s)):            if s[i] in str_set:                left=max(left,str_set[s[i]]+1)  
+        
+      </article>
+    </div>
+  </div>
+
+
+  
+  
+  <div class="post-wrap-left wow fadeInUp">
+    
+      <a class="post-link" href="/2024/04/04/2024-4-4-%E9%80%92%E6%8E%A8%E4%B8%8E%E9%80%92%E5%BD%92/" aria-label="递推、递归与动态规划"></a>
+    
+    
+    <div class="post-cover-left">
       
         <img data-src="https://github.com/Refyuan/refyuan.github.io/raw/main/covers/jk0.jpg" data-sizes="auto" alt="递推、递归与动态规划" class="lazyload">
       
@@ -494,12 +527,11 @@ leetcode70
 
   
   
-  <div class="post-wrap-left wow fadeInUp">
+  <div class="post-wrap-right wow fadeInUp">
     
-      <a class="post-link" href="/2024/04/03/2024-4-3-%E6%A0%91%E8%8E%93%E6%B4%BE/" aria-label="树莓派GPIO的使用"></a>
+    <a class="post-link" href="/2024/04/03/2024-4-3-%E6%A0%91%E8%8E%93%E6%B4%BE/"></a>
     
-    
-    <div class="post-cover-left">
+    <div class="post-cover-right">
       
         <img data-src="https://github.com/Refyuan/refyuan.github.io/raw/main/covers/infp1.jpg" data-sizes="auto" alt="树莓派GPIO的使用" class="lazyload">
       
@@ -514,42 +546,6 @@ leetcode70
       <article class="post-article">
         
           
-        
-      </article>
-    </div>
-  </div>
-
-
-  
-  
-  <div class="post-wrap-right wow fadeInUp">
-    
-    <a class="post-link" href="/2024/03/27/2024-3-27-%E9%93%BE%E8%A1%A8/"></a>
-    
-    <div class="post-cover-right">
-      
-        <img data-src="https://github.com/Refyuan/refyuan.github.io/raw/main/covers/miku7.jpg" data-sizes="auto" alt="指针与链表" class="lazyload">
-      
-    </div>
-    <div class="post-info">
-      <div class="post-meta">
-        <span><span class="icon-calendar"></span>2024-03-27</span>
-        <span><span class="icon-pencil"></span>727 words</span>
-        <span><span class="icon-clock"></span>3 mins</span>
-      </div>
-      <h2 class="post-title">指针与链表</h2>
-      <article class="post-article">
-        
-          有序链表的合成示例：LeetCode21  
-将两个升序链表合并为一个新的升序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
-两个链表的节点数目范围是[0, 50]
--100 &amp;lt;&amp;#x3D; Node.val &amp;lt;&amp;#x3D; 100
-l1和l2均按非递减顺序排列
-为了加深自己的理解写了两次，发现虽然算法思路基本一致，但用双指针时间复杂度更低，用迭代空间复杂度更低。
-
-双指针
-
-123456789101112131415161718192021222324from typing import Optionalclass ListNode:    def __init__
         
       </article>
     </div>
@@ -578,7 +574,7 @@ l1和l2均按非递减顺序排列
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>Posts</div>
-    <div class="sidebar-state-number">16</div>
+    <div class="sidebar-state-number">17</div>
   </div>
   <div class="sidebar-state-category">
     <div>Categories</div>
@@ -651,10 +647,10 @@ l1和l2均按非递减顺序排列
       
         <div>
           <span class="icon-brush"></span>
-          12k
+          12.4k
           &nbsp;|&nbsp;
           <span class="icon-coffee"></span>
-          00:43
+          00:44
         </div>
       
       
@@ -687,7 +683,7 @@ l1和l2均按非递减顺序排列
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>Posts</div>
-    <div class="sidebar-state-number">16</div>
+    <div class="sidebar-state-number">17</div>
   </div>
   <div class="sidebar-state-category">
     <div>Categories</div>
