@@ -11,6 +11,7 @@
 
   
   <title>
+    差分数组 |
     
     Refyuan
   </title>
@@ -24,16 +25,18 @@
   
 <link rel="stylesheet" href="/css/loader.css">
 
-  <meta name="description" content="考完研摆了几天，无限暖暖开荒开得差不多了，主线清完、支线就剩几个不想打的，于是想补番。 打开了happy sugar life，我想补有几年了，但是在看第一集的时候就有点坐不住了。 开头是男路人给砂糖告白被拒绝，转头路人兄弟就开始吐槽：和听说的不一样啊，不是搭话了就可以随意和你做吗？ 过会儿兼职的帅气前辈给砂糖告白被拒绝，美女店长和阴暗店员看不惯砂糖受男生欢迎就开始针对。 我好无语，有没有人能懂我">
+  <meta name="description" content="滑动窗口给定一个字符串s ，请你找出其中不含有重复字符的最长子串的长度。 示例：LeetCode3 1234567891011class Solution:    def lengthOfLongestSubstring(self, s: str) -&gt; int:        res&#x3D;0        str_set&#x3D;&#123;&#125;        left&#x3D;0        fo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Refyuan">
-<meta property="og:url" content="http://refyuan.github.io/2024/12/29/2024-12-29-%E7%AE%97%E6%98%AF%E6%9D%82%E8%B0%88/index.html">
+<meta property="og:title" content="差分数组">
+<meta property="og:url" content="http://refyuan.github.io/2024/04/08/2025-3-14-%E5%8F%8C%E6%8C%87%E9%92%88_happy%20pi%20day/index.html">
 <meta property="og:site_name" content="Refyuan">
-<meta property="og:description" content="考完研摆了几天，无限暖暖开荒开得差不多了，主线清完、支线就剩几个不想打的，于是想补番。 打开了happy sugar life，我想补有几年了，但是在看第一集的时候就有点坐不住了。 开头是男路人给砂糖告白被拒绝，转头路人兄弟就开始吐槽：和听说的不一样啊，不是搭话了就可以随意和你做吗？ 过会儿兼职的帅气前辈给砂糖告白被拒绝，美女店长和阴暗店员看不惯砂糖受男生欢迎就开始针对。 我好无语，有没有人能懂我">
+<meta property="og:description" content="滑动窗口给定一个字符串s ，请你找出其中不含有重复字符的最长子串的长度。 示例：LeetCode3 1234567891011class Solution:    def lengthOfLongestSubstring(self, s: str) -&gt; int:        res&#x3D;0        str_set&#x3D;&#123;&#125;        left&#x3D;0        fo">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-12-29T07:29:01.661Z">
-<meta property="article:modified_time" content="2025-02-28T15:25:25.463Z">
+<meta property="article:published_time" content="2024-04-07T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-03-14T15:26:24.799Z">
 <meta property="article:author" content="Sue">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="数据结构与算法">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Refyuan" type="application/atom+xml">
@@ -194,7 +197,7 @@ p.spoiler {
 </div>
 <header id="header">
   
-    <img fetchpriority="high" src="/images/banner.jpg" alt="">
+    <img fetchpriority="high" src="https://github.com/Refyuan/refyuan.github.io/raw/main/covers/fulilian7.jpg" alt="差分数组">
   
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
@@ -203,7 +206,7 @@ p.spoiler {
           
           
             <a href="/" id="logo">
-              <h1>Refyuan</h1>
+              <h1>差分数组</h1>
             </a>
           
         
@@ -220,12 +223,12 @@ p.spoiler {
 
         <div id="content" class="outer">
           
-          <section id="main"><article id="post-2024-12-29-算是杂谈" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+          <section id="main"><article id="post-2025-3-14-双指针_happy pi day" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-inner">
     <div class="article-meta">
       <div class="article-date wow slideInLeft">
-  <a href="/2024/12/29/2024-12-29-%E7%AE%97%E6%98%AF%E6%9D%82%E8%B0%88/" class="article-date-link">
-    <time datetime="2024-12-29T07:29:01.661Z" itemprop="datePublished">2024-12-29</time>
+  <a href="/2024/04/08/2025-3-14-%E5%8F%8C%E6%8C%87%E9%92%88_happy%20pi%20day/" class="article-date-link">
+    <time datetime="2024-04-07T16:00:00.000Z" itemprop="datePublished">2024-04-08</time>
   </a>
 </div>
 
@@ -237,50 +240,40 @@ p.spoiler {
 
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>考完研摆了几天，无限暖暖开荒开得差不多了，主线清完、支线就剩几个不想打的，于是想补番。</p>
-<p>打开了happy sugar life，我想补有几年了，但是在看第一集的时候就有点坐不住了。</p>
-<p>开头是男路人给砂糖告白被拒绝，转头路人兄弟就开始吐槽：和听说的不一样啊，不是搭话了就可以随意和你做吗？</p>
-<p>过会儿兼职的帅气前辈给砂糖告白被拒绝，美女店长和阴暗店员看不惯砂糖受男生欢迎就开始针对。</p>
-<p>我好无语，有没有人能懂我的感受——</p>
-<p>不带任何负面情感色彩地说，作者必定是男性，且是和异性接触过少的宅男。</p>
-<p>剧情过于不符合实际，又过于符合男性占大多数的论坛的刻板印象。</p>
-<p>一是鉴鸡，在现实中实在是非常不礼貌的行为，因为任何正常人都厌恶污蔑清白。</p>
-<p>真鸡可以随便骂随便唾弃，这是它们应得的。但是如果不是鸡呢？太多太多道听途说带来了伤害，被网暴自杀早已不是个例。</p>
-<p>二是认为女性团体因男性勾心斗角，漂亮女性因为外貌处处被同性打压。</p>
-<p>无论男女首先都是人，每个人的兴趣爱好有那么那么多，圈子那么那么多，异性&#x2F;谈恋爱这回事也就只是生活中众多事情的一小件。</p>
-<p>有人对和异性交流毫无兴趣，游戏没打番没看，异性算什么？为什么要因为异性的事情打压同性？损人不利己。</p>
-<p>我看着看着甚至在想，我非常理解宅男有一些在女生看来及其荒谬的言论了。源于不了解和缺乏沟通。</p>
-<p>因为他们现实中基本不接触女生，对女生的了解全来自于ACG和网络上看的逆天事件，那能有好印象才怪了。</p>
-<p>ACG中的人物逻辑就是不符合现实的，至少是不符合我国国情的。平台向钱看只会给逆天事件投流，他们一看哇女人真是逆天，开始恐女厌女。</p>
-<p>很难想象自己之前是如何看进那么多番的，离开二次元贴近生活久了以后发现确实回不去了。那里过于不现实了。</p>
-<p>对男拳女拳的事其实一直有很多话想说，但是一己之力并没有用，除了写个博客记录给自己看也没什么办法。</p>
-<p>之前bilibili给动态推流，我写了很长。中心思想就是我既骂女拳又骂男拳，作为正常人的大伙应该清醒过来，不要底层互害不要被西方带节奏，尝试互相理解，不能互相理解也请不要互相攻击。</p>
-<p>一位男用户给我留言说他支持男拳，我是女的，如果不打女拳，那就开除女籍当他们男拳的伥鬼。</p>
-<p>我回复我的身份证号倒数第二位是偶数，除了国家没人能开除我的女籍。无论如何我都不会打拳也不会支持打拳。</p>
-<p>后来我的评论被举报删除了。后来我的动态也没了。这里连着写两个后来，但实际上就是一天时间。</p>
-<p>一天，足以让平台多推几个逆天事件，足以捂住正常人想要发声的嘴。</p>
-<p>但是我又能做什么呢，除了坚持自己以外。</p>
-<p>甜牛奶的，坚持自己也不是一件容易的事情。我可以理解男性的难处，不打拳不要彩礼不要房车，和男友相互付出相互扶持。</p>
-<p>但是呢，当我看到那么多贱人无差别攻击女性我又怎么能忍，我不是圣人，被指着鼻子以莫须有的罪名骂谁能舒服？被阴谋论谁能有好心情？</p>
-<p>只要有情感问题，那就是女的要彩礼了&#x2F;女的要男的爆金币导致的，问就是不如洗脚妹给的情绪价值。</p>
-<p>只要是就业问题，你们女的不好就业原因是女的都不是好东西，前面生孩子的把路走窄了，性别原罪论。</p>
-<p>我一直清晰地知道矛盾不该是底层与底层间的。但是即使是我非常有同理心地看待，看到这些言论也不免在想，这些人无差别地恨与伤害，我体谅又有什么用，它们看到我体谅或许还会更激烈地攻击我。</p>
-<p>两边拳师魔法对轰，受伤的却是我。我不是圣人，我也不是爱所有人民的毛主席，我会阴暗地想要男拳女拳全部死掉。</p>
-<p>我曾看过微博小红书非常逆天的女拳发言，所以我能理解一些普通男性说恐女。如今我看到b站小黑盒非常逆天的男拳发言，我真的差一点就踏进女拳漩涡。只因为我对男拳愤怒，我想反驳、想发声。</p>
-<p>但我又知道我和女拳那些人除了都有生理期，没有什么共同点。诉求不一致，它们想要特权，我只想平等地、去性别化地就事论事。</p>
-<p>不得不说性别对立真是好歹毒的计谋。只要上网就避不开这些脏东西，生理特征天然地在舆论场里划阵营。如果不选择拳击，只会折磨自己。</p>
-<p>我心态最健康的时候是不看任何论坛的时候。但无可避免，人是社会动物，哪怕自己不主动接触，也会被腌入味的某些人恶心。</p>
-<p>折磨就折磨吧，恶心就恶心吧，至少我没变。我依然觉得大家都不容易，我依然追求平等，我依然认为妇女能顶半边天，责任与义务相辅相成。我依然认为无产阶级之间不应就“谁更惨”这一问题相互攻讦。</p>
-<p>痛苦就是痛苦，难道遇到一个巨大的痛苦，痛苦不够大的人都失去了哭泣的资格吗。每天把时间浪费在这种地方真是毫无意义。</p>
+        <h4 id="滑动窗口"><a href="#滑动窗口" class="headerlink" title="滑动窗口"></a>滑动窗口</h4><p><em>给定一个字符串s ，请你找出其中不含有重复字符的最长子串的长度。</em></p>
+<p><em>示例：LeetCode3</em></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">lengthOfLongestSubstring</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        res=<span class="number">0</span></span><br><span class="line">        str_set=&#123;&#125;</span><br><span class="line">        left=<span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(s)):</span><br><span class="line">            <span class="keyword">if</span> s[i] <span class="keyword">in</span> str_set:</span><br><span class="line">                left=<span class="built_in">max</span>(left,str_set[s[i]]+<span class="number">1</span>)</span><br><span class="line">            str_set[s[i]] = i</span><br><span class="line">            res=<span class="built_in">max</span>(res,i-left+<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+<p>本人遇到的问题：</p>
+<p>1.str_set字典的key和value整反了，写成了</p>
+<blockquote>
+<p>str_set[i] &#x3D; s[i]</p>
+</blockquote>
+<p>这就导致字典不是</p>
+<blockquote>
+<p>str_set &#x3D; {‘a’: 0, ‘b’: 1, ‘c’: 2}</p>
+</blockquote>
+<p>而是 </p>
+<blockquote>
+<p>{<br>    0: ‘a’,<br>    1: ‘b’,<br>    2: ‘c’,<br>    3: ‘a’<br>}</p>
+</blockquote>
+<p> ❌ 这样无法查询某个字符是否出现过</p>
+<p>2.左指针更新没有写成</p>
+<blockquote>
+<p>left&#x3D;max(left,str_set[s[i]]+1)</p>
+</blockquote>
+<p>这可能导致左指针左移出错。</p>
+<p>3.最大的问题，将左指针原坐标置为0，左指针移动到重复值的索引。之前的语句是</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">lengthOfLongestSubstring</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        res=<span class="number">0</span></span><br><span class="line">        str_set=&#123;&#125;</span><br><span class="line">        left=<span class="number">0</span></span><br><span class="line">        n=<span class="built_in">len</span>(s)</span><br><span class="line">        <span class="keyword">if</span> n==<span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">            exit()</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(s)):</span><br><span class="line">            <span class="keyword">if</span> s[i] <span class="keyword">in</span> str_set:</span><br><span class="line">                left=<span class="built_in">max</span>(left,str_set[s[i]])</span><br><span class="line">            str_set[s[i]] = i</span><br><span class="line">            res=<span class="built_in">max</span>(res,i-left)</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+<p>当测试用例为” “（一个空格字符串）时，res会错误地输出0。因为len(s)为1，left会移动到1，i-left&#x3D;0。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://refyuan.github.io/2024/12/29/2024-12-29-%E7%AE%97%E6%98%AF%E6%9D%82%E8%B0%88/" data-id="cm7xf1onx0000isjh1qh02x1d" data-title="" class="article-share-link">Share</a>
+      <a data-url="http://refyuan.github.io/2024/04/08/2025-3-14-%E5%8F%8C%E6%8C%87%E9%92%88_happy%20pi%20day/" data-id="cm8abg3qz0000qsjhftl96opg" data-title="差分数组" class="article-share-link">Share</a>
       
       
-        <a href="/2024/12/29/2024-12-29-%E7%AE%97%E6%98%AF%E6%9D%82%E8%B0%88/#comments" class="article-comment-link">
-          <span class="post-comments-count waline-comment-count" data-path="/2024/12/29/2024-12-29-%E7%AE%97%E6%98%AF%E6%9D%82%E8%B0%88/" itemprop="commentCount"></span>
+        <a href="/2024/04/08/2025-3-14-%E5%8F%8C%E6%8C%87%E9%92%88_happy%20pi%20day/#comments" class="article-comment-link">
+          <span class="post-comments-count waline-comment-count" data-path="/2024/04/08/2025-3-14-%E5%8F%8C%E6%8C%87%E9%92%88_happy%20pi%20day/" itemprop="commentCount"></span>
           Comments
         </a>
       
@@ -288,11 +281,13 @@ p.spoiler {
       
       
         <span class="article-visitor-link">
-          <span class="waline-pageview-count" data-path="/2024/12/29/2024-12-29-%E7%AE%97%E6%98%AF%E6%9D%82%E8%B0%88/">0</span>
+          <span class="waline-pageview-count" data-path="/2024/04/08/2025-3-14-%E5%8F%8C%E6%8C%87%E9%92%88_happy%20pi%20day/">0</span>
           <em class="post-meta-item-text">Readings</em>
         </span>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" rel="tag">数据结构与算法</a></li></ul>
+
 
     </footer>
   </div>
@@ -302,13 +297,13 @@ p.spoiler {
     
       <div class="article-nav-link-wrap article-nav-link-left">
         
-          <img data-src="https://github.com/Refyuan/refyuan.github.io/raw/main/covers/miku4.png" data-sizes="auto" alt="打赢复活赛了" class="lazyload">
+          <img data-src="https://github.com/Refyuan/refyuan.github.io/raw/main/covers/fulilian7.jpg" data-sizes="auto" alt="差分数组" class="lazyload">
         
-        <a href="/2025/02/28/2025-2-28-%E6%89%93%E8%B5%A2%E5%A4%8D%E6%B4%BB%E8%B5%9B%E4%BA%86/"></a>
+        <a href="/2024/04/08/2024-4-8-%E5%B7%AE%E5%88%86%E6%95%B0%E7%BB%84/"></a>
         <div class="article-nav-caption">Newer</div>
         <h3 class="article-nav-title">
           
-            打赢复活赛了
+            差分数组
           
         </h3>
       </div>
@@ -316,13 +311,13 @@ p.spoiler {
     
     <div class="article-nav-link-wrap article-nav-link-right">
       
-        <img data-src="https://github.com/Refyuan/refyuan.github.io/raw/main/covers/wlda.jpg" data-sizes="auto" alt="近期汇报，蓝桥杯与期末与考研" class="lazyload">
+        <img data-src="https://github.com/Refyuan/refyuan.github.io/raw/main/covers/jk0.jpg" data-sizes="auto" alt="递推、递归与动态规划" class="lazyload">
       
-      <a href="/2024/06/03/2024-6-4-%E8%BF%91%E6%9C%9F%E6%B1%87%E6%8A%A5/"></a>
+      <a href="/2024/04/04/2024-4-4-%E9%80%92%E6%8E%A8%E4%B8%8E%E9%80%92%E5%BD%92/"></a>
       <div class="article-nav-caption">Older</div>
       <h3 class="article-nav-title">
         
-          近期汇报，蓝桥杯与期末与考研
+          递推、递归与动态规划
         
       </h3>
     </div>
@@ -347,7 +342,7 @@ p.spoiler {
     
       <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
   <h3 class="toc-title">Contents</h3>
-  <div class="sidebar-toc-wrapper"></div>
+  <div class="sidebar-toc-wrapper"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3"><span class="toc-number">1.</span> <span class="toc-text">滑动窗口</span></a></li></ol></div>
 </div>
 </div>
       <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
@@ -358,7 +353,7 @@ p.spoiler {
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>Posts</div>
-    <div class="sidebar-state-number">17</div>
+    <div class="sidebar-state-number">16</div>
   </div>
   <div class="sidebar-state-category">
     <div>Categories</div>
@@ -436,10 +431,10 @@ p.spoiler {
       
         <div>
           <span class="icon-brush"></span>
-          12.4k
+          10.8k
           &nbsp;|&nbsp;
           <span class="icon-coffee"></span>
-          00:44
+          00:39
         </div>
       
       
@@ -466,7 +461,7 @@ p.spoiler {
     
       <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
   <h3 class="toc-title">Contents</h3>
-  <div class="sidebar-toc-wrapper"></div>
+  <div class="sidebar-toc-wrapper"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3"><span class="toc-number">1.</span> <span class="toc-text">滑动窗口</span></a></li></ol></div>
 </div>
 </div>
       <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
@@ -477,7 +472,7 @@ p.spoiler {
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>Posts</div>
-    <div class="sidebar-state-number">17</div>
+    <div class="sidebar-state-number">16</div>
   </div>
   <div class="sidebar-state-category">
     <div>Categories</div>
